@@ -1,0 +1,57 @@
+# Heart Disease Prediction Model Evaluation Metrics
+
+--- Logistic Regression ---
+Accuracy: 0.869
+Precision: 0.812
+Recall: 0.929
+F1 Score: 0.867
+ROC-AUC: 0.960
+Confusion Matrix:
+[[27  6]
+ [ 2 26]]
+
+--- Decision Tree ---
+Accuracy: 0.738
+Precision: 0.688
+Recall: 0.786
+F1 Score: 0.733
+ROC-AUC: 0.741
+Confusion Matrix:
+[[23 10]
+ [ 6 22]]
+
+--- Random Forest ---
+Accuracy: 0.885
+Precision: 0.839
+Recall: 0.929
+F1 Score: 0.881
+ROC-AUC: 0.938
+Confusion Matrix:
+[[28  5]
+ [ 2 26]]
+
+--- SVM ---
+Accuracy: 0.918
+Precision: 0.897
+Recall: 0.929
+F1 Score: 0.912
+ROC-AUC: 0.959
+Confusion Matrix:
+[[30  3]
+ [ 2 26]]
+
+
+# Unsupervised Learning Evaluation
+Optimal K (from Elbow method): 2
+Adjusted Rand Index (ARI): 0.511
+Elbow curve saved as elbow_curve.png
+Dendrogram saved as dendrogram.png
+
+# Hyperparameter Tuning Evaluation
+Baseline Random Forest Accuracy: 0.885
+GridSearchCV Best Params: {'max_depth': 5, 'min_samples_leaf': 2, 'min_samples_split': 2, 'n_estimators': 100}
+GridSearchCV CV Accuracy: 0.818
+GridSearchCV Test Accuracy: 0.902
+RandomizedSearchCV Best Params: {'n_estimators': 400, 'min_samples_split': 15, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': None}
+RandomizedSearchCV CV Accuracy: 0.818
+RandomizedSearchCV Test Accuracy: 0.885
